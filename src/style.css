@@ -1,0 +1,321 @@
+@import './fonts/fonts.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+/* LEFT HEADER */
+.left-side-block{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background-color: #eeeeee;
+}
+.left-side-block-header-title{
+    color: #212121;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+.left-header-title{
+    padding: 1rem 0 0.8rem 2rem;
+}
+#left-arrow-img{
+    cursor: pointer;
+    transition: 0.8s ease all;
+}
+.slide-img-after-click{
+    transform: rotateY(180deg);
+    transition: 0.8s ease all;
+}
+
+/*  LEFT MENU */
+.left-menu-item{
+    padding: 1rem 1rem 1rem 2rem;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+.left-menu-item:hover{
+    background-color: #E0E0E0;
+}
+.left-menu-item:active{
+    background-color: #c7c7c7;
+}
+
+
+/*  MAIN BLOCK    */
+.main-block-header{
+    padding: 1rem;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: #2196F3;
+}
+.side-drawer{
+    cursor: pointer;
+}
+
+.main-block-content{
+    padding: 1rem;
+}
+
+.leftBar-after-click{
+    transform: translateX(250px);
+    transition: 0.2s ease all;
+}
+.main-after-click{
+    transform: translateX(250px);
+    width: calc(100% - 250px);
+    transition: 0.2s ease all;
+}
+.main-block, .left-side-block{
+    transition: 0.2s ease all;
+}
+
+.choose-cathegory{
+    text-align: center;
+}
+.current{
+    background-color: #c7c7c7;
+}
+
+/*    Weather     */
+:root {
+    --color__accent: #2196F3;
+  
+    --field__background: #f5f5f5;
+    --field__background--hover: #e9e9e9;
+    --input__border: rgba(0, 0, 0, 0.42);
+    --input__border--hover: rgba(0, 0, 0, 0.62);
+    --label__color: #222;
+  
+    --font__size: 16px;
+    --font__family: Roboto, Arial, sans-serif;
+  }
+  
+  .floating {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--field__background);
+    transition: background-color 0.2s ease;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 300px;
+  }
+  
+  .floating:hover,
+  .floating:focus-within {
+    background-color: var(--field__background--hover);
+  }
+  
+  .floating__input {
+    padding: 1.8rem 1rem 0.6rem;
+    font-size: 1rem;
+    border-bottom: 0.1rem solid var(--input__border);
+    transition: border-color 0.2s ease;
+    caret-color: var(--color__accent);
+    width: 300px;
+  }
+  
+  .floating:hover .floating__input {
+    border-color: var(--input__border--hover);
+  }
+  
+  .floating__input::placeholder {
+    color: rgba(0, 0, 0, 0);
+  }
+  
+  .floating__label {
+    display: block;
+    position: relative;
+    max-height: 0;
+    font-weight: 500;
+    pointer-events: none;
+  }
+  
+  .floating__label::before {
+    color: var(--label__color);
+    content: attr(data-content);
+    display: inline-block;
+    filter: blur(0);
+    backface-visibility: hidden;
+    transform-origin: left top;
+    transition: transform 0.2s ease;
+    left: 1rem;
+    position: relative;
+  }
+    
+  .floating__input:focus + .floating__label::after {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  
+  .floating__input:placeholder-shown + .floating__label::before {
+    transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+  }
+  
+  .floating__label::before,
+  .floating__input:focus + .floating__label::before {
+    transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+  }
+  
+  .floating__input:focus + .floating__label::before {
+    color: var(--color__accent);
+  }
+
+  input {
+    box-sizing: border-box;
+    background: none;
+    border-width: 0;
+    display: block;
+  }
+
+#get-weather-btn{
+    box-sizing: border-box;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #2196F3;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 0;
+    height: 60px;
+    transition: 0.2s ease all;
+
+}
+#get-weather-btn:active {
+    background-color: #6278d8;
+    transition: 0.2s ease all;
+}
+#get-weather-btn:disabled{
+  background-color: rgb(127, 193, 247);
+}
+
+/*  Weather Content after request */
+.location-name{
+  margin: 1rem 0 1rem 0;
+  font-size: 2em;
+  font-family: 'Roboto';
+  text-align: center;
+}
+.weather-on-hours{
+    float: left;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.new-line{
+    box-sizing: border-box;
+    clear: both;
+    margin: 1rem 0 0 1rem;
+    font-size: 2em;
+}
+.error-city{
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: darkred;
+}
+
+/*   Exchange Page   */
+.exchange-header{
+  padding: 1rem;
+}
+
+.exchange-text-wrapper{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.exchange-form{
+  padding: 1rem;
+  margin-top: -30px;
+}
+.floating-money{
+  float: left;
+  width: 150px;
+  margin-right: 1rem;
+}
+.floating__input_money{
+  width: 150px;
+}
+.right-arrow{
+  width: 50px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 35px;
+}
+
+#get-exchange-btn{
+  clear: both;
+  line-height: 30px;
+  border: none;
+  background-color: #2196F3;
+  color: #fff;
+  cursor: pointer;
+}
+#get-exchange-btn:disabled {
+  background-color: rgb(127, 193, 247);
+}
+#get-exchange-btn-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+#currency-list{
+  clear: both;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-left: 1rem;
+  transform: translateY(1rem);
+}
+.rest-currencies {
+  padding-bottom: 10px
+}
+.error{
+  color: darkred;
+}
+
+/*   Contact page     */
+.contact-block-wrapper{
+  transform: translateX(40%);
+}
+.contact-wrapper{
+  float: left;
+  text-align: center;
+  transform: translateY(50%);
+  box-sizing: border-box;
+}
+.contact{
+  float: left;
+  text-align: center;
+  text-decoration-style: none;
+  margin-right: 1rem;
+  transform: translateX(2rem);
+
+}
+.contact-image{
+  width: 40px;
+  height: auto;
+  transition: 0.2s ease all;
+}
+.contact-image:hover {
+  width: 60px;
+  height: auto;
+  transition: 0.2s ease all;
+}
+.contact-link{
+  text-decoration: none;
+}
+.contact-text{
+  font-size: 16px;
+  margin-bottom: 2rem;
+}

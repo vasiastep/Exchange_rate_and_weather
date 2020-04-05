@@ -26,6 +26,7 @@ export class Weather {
         return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=${apiKey}`)
             .then(response => response.json())
             .then(data => {
+                
                 return data;
             })
     }

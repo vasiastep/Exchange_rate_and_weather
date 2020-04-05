@@ -6,3 +6,7 @@ Open the Command Line in the main project folder and run the command:
  2. "npm run prod"
  
 Then open .html file in the "dist"
+
+Or try it now:
+
+https://vasiastep.github.io/Exchange_rate_and_weather/dist/index.html

@@ -23,7 +23,7 @@ export class Weather {
 
         const apiKey = '249d0f9002c1194bbde52c002bcaf14d';
     
-        return fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=${apiKey}`)
+        return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=${apiKey}`)
             .then(response => response.json())
             .then(data => {
                 return data;
